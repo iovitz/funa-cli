@@ -1,0 +1,51 @@
+{
+  "name": "funa-cli",
+  "version": "1.0.0",
+  "description": "A frondend cli",
+  "main": "index.js",
+  "scripts": {
+    "lint-staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iovitz/funa-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iovitz/funa-cli/issues"
+  },
+  "homepage": "https://github.com/iovitz/funa-cli#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "commitizen": "^4.2.5",
+    "commitlint": "^17.3.0",
+    "concurrently": "^7.6.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.28.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^8.0.2",
+    "lerna": "^6.0.3",
+    "lint-staged": "^13.0.3"
+  },
+  "workspaces": [
+    "core/*",
+    "commands/*",
+    "module/*",
+    "utils/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --cache --fix",
+      "git add"
+    ]
+  }
+}

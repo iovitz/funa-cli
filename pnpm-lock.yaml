@@ -1,34 +1,42 @@
 lockfileVersion: 5.3
 
-specifiers:
-  '@commitlint/cli': ^17.3.0
-  '@commitlint/config-conventional': ^17.3.0
-  '@typescript-eslint/parser': ^5.44.0
-  commitizen: ^4.2.5
-  commitlint: ^17.3.0
-  concurrently: ^7.6.0
-  cz-conventional-changelog: ^3.3.0
-  cz-customizable: ^7.0.0
-  eslint: ^8.28.0
-  eslint-config-google: ^0.14.0
-  husky: ^8.0.2
-  lerna: ^6.0.3
-  lint-staged: ^13.0.3
+importers:
 
-devDependencies:
-  '@commitlint/cli': 17.3.0
-  '@commitlint/config-conventional': 17.3.0
-  '@typescript-eslint/parser': 5.44.0_eslint@8.28.0
-  commitizen: 4.2.5
-  commitlint: 17.3.0
-  concurrently: 7.6.0
-  cz-conventional-changelog: 3.3.0
-  cz-customizable: 7.0.0
-  eslint: 8.28.0
-  eslint-config-google: 0.14.0_eslint@8.28.0
-  husky: 8.0.2
-  lerna: 6.0.3
-  lint-staged: 13.0.3
+  .:
+    specifiers:
+      '@commitlint/cli': ^17.3.0
+      '@commitlint/config-conventional': ^17.3.0
+      commitizen: ^4.2.5
+      commitlint: ^17.3.0
+      concurrently: ^7.6.0
+      cz-conventional-changelog: ^3.3.0
+      cz-customizable: ^7.0.0
+      eslint: ^8.28.0
+      eslint-config-google: ^0.14.0
+      husky: ^8.0.2
+      lerna: ^6.0.3
+      lint-staged: ^13.0.3
+    devDependencies:
+      '@commitlint/cli': 17.3.0
+      '@commitlint/config-conventional': 17.3.0
+      commitizen: 4.2.5
+      commitlint: 17.3.0
+      concurrently: 7.6.0
+      cz-conventional-changelog: 3.3.0
+      cz-customizable: 7.0.0
+      eslint: 8.28.0
+      eslint-config-google: 0.14.0_eslint@8.28.0
+      husky: 8.0.2
+      lerna: 6.0.3
+      lint-staged: 13.0.3
+
+  core/cli:
+    specifiers:
+      commander: ^9.4.1
+      user-home: ^3.0.0
+    dependencies:
+      commander: 9.4.1
+      user-home: 3.0.0
 
 packages:
 
@@ -1387,66 +1395,6 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
-  /@typescript-eslint/parser/5.44.0_eslint@8.28.0:
-    resolution: {integrity: sha512-H7LCqbZnKqkkgQHaKLGC6KUjt3pjJDx8ETDqmwncyb6PuoigYajyAwBGz08VU/l86dZWZgI4zm5k2VaKqayYyA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/scope-manager': 5.44.0
-      '@typescript-eslint/types': 5.44.0
-      '@typescript-eslint/typescript-estree': 5.44.0
-      debug: 4.3.4
-      eslint: 8.28.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/scope-manager/5.44.0:
-    resolution: {integrity: sha512-2pKml57KusI0LAhgLKae9kwWeITZ7IsZs77YxyNyIVOwQ1kToyXRaJLl+uDEXzMN5hnobKUOo2gKntK9H1YL8g==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      '@typescript-eslint/types': 5.44.0
-      '@typescript-eslint/visitor-keys': 5.44.0
-    dev: true
-
-  /@typescript-eslint/types/5.44.0:
-    resolution: {integrity: sha512-Tp+zDnHmGk4qKR1l+Y1rBvpjpm5tGXX339eAlRBDg+kgZkz9Bw+pqi4dyseOZMsGuSH69fYfPJCBKBrbPCxYFQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
-  /@typescript-eslint/typescript-estree/5.44.0:
-    resolution: {integrity: sha512-M6Jr+RM7M5zeRj2maSfsZK2660HKAJawv4Ud0xT+yauyvgrsHu276VtXlKDFnEmhG+nVEd0fYZNXGoAgxwDWJw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 5.44.0
-      '@typescript-eslint/visitor-keys': 5.44.0
-      debug: 4.3.4
-      globby: 11.1.0
-      is-glob: 4.0.3
-      semver: 7.3.8
-      tsutils: 3.21.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/visitor-keys/5.44.0:
-    resolution: {integrity: sha512-a48tLG8/4m62gPFbJ27FxwCOqPKxsb8KC3HkmYoq2As/4YyjQl1jDbRr1s63+g4FS/iIehjmN3L5UjmKva1HzQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      '@typescript-eslint/types': 5.44.0
-      eslint-visitor-keys: 3.3.0
-    dev: true
-
   /@yarnpkg/lockfile/1.1.0:
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
     dev: true
@@ -2017,7 +1965,6 @@ packages:
   /commander/9.4.1:
     resolution: {integrity: sha512-5EEkTNyHNGFPD2H+c/dXXfQZYa/scCKasxWcXJaWnNJ99pnQN9Vnmqow+p+PlFPE63Q6mThaZws1T+HxfpgtPw==}
     engines: {node: ^12.20.0 || >=14}
-    dev: true
 
   /commitizen/4.2.5:
     resolution: {integrity: sha512-9sXju8Qrz1B4Tw7kC5KhnvwYQN88qs2zbiB8oyMsnXZyJ24PPGiNM3nHr73d32dnE3i8VJEXddBFIbOgYSEXtQ==}
@@ -4464,7 +4411,6 @@ packages:
   /os-homedir/1.0.2:
     resolution: {integrity: sha512-B5JU3cabzk8c67mRRd3ECmROafjYMXbuzlwtqdM8IbS8ktlTix8aFGb2bAGKrSRIlnfKwovGUUr72JUPyOb6kQ==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /os-tmpdir/1.0.2:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
@@ -5528,15 +5474,6 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
 
-  /tsutils/3.21.0:
-    resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
-    engines: {node: '>= 6'}
-    peerDependencies:
-      typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
-    dependencies:
-      tslib: 1.14.1
-    dev: true
-
   /type-check/0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -5638,6 +5575,14 @@ packages:
     dependencies:
       os-homedir: 1.0.2
     dev: true
+
+  /user-home/3.0.0:
+    resolution: {integrity: sha512-kHp9sWxeB+EVTcVytDrGLVKgVVN1LoLiIZTwCDcvYNjIu9q7tUOXZoTv0mXjmvFvUju4J9v+RkFGHdTMx8ncmQ==}
+    engines: {node: '>=0.10.0'}
+    deprecated: Deprecated. Just use `import {homedir} from os;`.
+    dependencies:
+      os-homedir: 1.0.2
+    dev: false
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}

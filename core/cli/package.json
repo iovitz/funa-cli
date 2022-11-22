@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "cli",
   "main": "src/index.js",
-  "scripts": {
+  "bin": {
+    "fuma": "src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "user-home": "^3.0.0"
+  }
 }
